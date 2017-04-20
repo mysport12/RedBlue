@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RedBlue_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="6fP-Wf-FCu">
+                            <items>
+                                <label width="43" height="22.5" alignment="left" text="Cold" id="IMy-sN-bHx">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <slider width="1" alignment="left" verticalAlignment="center" value="10" minimum="2" maximum="10" steps="9" id="FOE-by-ulr">
+                                    <connections>
+                                        <action selector="sliderButtonPressed:" destination="AgC-eL-Hgc" id="RyJ-mt-mDE"/>
+                                    </connections>
+                                </slider>
+                                <switch width="1" height="30" alignment="left" verticalAlignment="bottom" value="YES" title="Blue/Red" id="8w8-pe-tw9" userLabel="Red/Blue">
+                                    <connections>
+                                        <action selector="colorSwitchPressed:" destination="AgC-eL-Hgc" id="feY-4I-5VB"/>
+                                    </connections>
+                                </switch>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Reset" id="MMJ-cJ-UUk">
+                                    <connections>
+                                        <action selector="resetButtonPressed" destination="AgC-eL-Hgc" id="w61-9a-gMQ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="colorSwitch" destination="8w8-pe-tw9" id="SsA-27-r6W"/>
+                        <outlet property="descriptionLabel" destination="IMy-sN-bHx" id="2sV-63-g90"/>
+                        <outlet property="myGroup" destination="6fP-Wf-FCu" id="0fT-2r-qfE"/>
+                        <outlet property="resetButton" destination="MMJ-cJ-UUk" id="vnc-dO-Xbz"/>
+                        <outlet property="sliderSwitch" destination="FOE-by-ulr" id="NCC-qr-wUF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="289" y="369"/>
+        </scene>
+    </scenes>
+</document>
